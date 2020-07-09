@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives';
+  private someRandomVariable: boolean = false;
+  private name: string = "test";
+  data = [
+    {
+      lang: 'Javascript',
+      usedOn: 'web'
+    },
+    {
+      lang: 'Swift',
+      usedOn: 'iOS'
+    }
+  ]
+
+  constructor() {
+    setInterval(() => {
+      this.someRandomVariable = !this.someRandomVariable;
+    }, 1000)
+  }
 }
